@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Container, Stack ,Button} from 'react-bootstrap';
 import BudgetCard from './components/BudgetCard';
 import AddBudgetModal from './components/AddBudgetModal';
 import AddExpensesModal from './components/AddExpensesModal';
 
-import { useBudgets, UNCATEGORIZED_BUDGET_ID } from './context/BudgetContext';
+import { useBudgets } from './context/BudgetContext';
 import {useState } from 'react';
 import UncategorizedBudgetCard from './components/UncategorizedBudgetCard';
 
@@ -14,7 +14,7 @@ function App() {
  const [ showModalBudget,setShowModalBudget] = useState(false)
  const [ showModalExpense,setShowModalExpense] = useState(false)
  const [addExpensesModalBudgetId,setAddExpensesModalBudgetId] =useState()
- const {budgets, expenses, getBudgetExpenses} = useBudgets()
+ const {budgets,  getBudgetExpenses} = useBudgets()
 
 
  function toogleBudgetModal(){
