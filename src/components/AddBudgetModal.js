@@ -7,7 +7,7 @@ export default function AddBudgetModal({show, handleClose}){
     
     const nameRef = useRef()
     const maxRef  = useRef()
-    const {addBudget, budgets}= useBudgets()
+    const {addBudget}= useBudgets()
 
     function handleSubmit(e){
         e.preventDefault();
